@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Thomas Nicolle">
+    <meta name="keywords" content="ub universite bourgogne projet">
+    <title>Sécur'Net</title>
+    <link rel="stylesheet" type="text/css" href="css/mainStyles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="select"><a href="index.html">Acceuil</a></li>
+            <li><a href="vpn.html">VPN</a></li>
+            <li><a href="app.html">Application</a></li>
+            <li><a href="tool.html">Outils</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="box_header">
+        <h1>Bienvenue !</h1>
+        <p>Site internet réalisé pour un projet d'étude à l'uB. Nous somme le <span id="date"></span> et il est
+            <span id="heure"></span>. Bonne visite 😀
+        </p>
+    </div>
+    <main id="box_content">
+        <canvas id="canvas" width="202" height="100" class="img-left">
+            Désolé, votre navigateur ne prend pas en charge canvas;.
+        </canvas>
+        <p>Ci-contre un canevas composé uniquement de courbe de bézier censé représentant "un oeil".</p>
+        <p>Pour construire un canevas il faut d'abord l'implémenter dans le HTML avec la balise
+            &lt;canevas&gt;&lt;/canevas&gt;, et y définir la taille du plan.</p>
+        <p id="test">Ensuite on passe au javascript, il faut importerl'élément canvas puis definir sont context en 2d. On utilise
+            indépendament la fonction beginPath 3 fois pour
+            chaque partie de l'oeil (contour, globe, rétine et pupille), on y définit la couleur du contour avec
+            strokeStyle et le remplissage avec fillStyle (ex: noir et blanc pour le contour et le globe oculaire) ainsi
+            que l'épaisseur du trait.
+            On deplacer le crayon sur une coordonnée de début (moveto) et on trace une courbe de bézier en indiquant les
+            coordonnés de deux points pour faire la courbure ainsi que la coordonnée de fin; et ainsi de suite jusqu'a
+            terminer par stroke() et fill() pour indiquer que le dessin est finit.</p>
+
+        <p>Pour plus d'informations sur quel services(VPN, messagerie mail...) choisir, rendez-vous sur :</p>
+        <ul>
+            <li><a href="https://privacyheroes.io/" target="_blank">Privacy Heroes</a></li>
+            <li><a href="https://prism-break.org/fr/" target="_blank">PRISM⚡️BREAK</a></li>
+            <li><a href="https://www.privacytools.io/" target="_blank">PrivacyTools</a></li>
+            <li><a href="https://www.securemessagingapps.com" target="_blank">Secure Messaging Apps</a></li>
+        </ul>
+        <audio src="sounds/computerkeyboard.mp3" controls>test</audio><br>
+        <a href="https://lasonotheque.org/detail-0229-clavier-d-ordinateur.html"><q>Gratuit et Libre de Droit</q></a>
+    </main>
+    <footer>
+        <small>Copyright &copy; 2021 Sécur'Net. Tous droits réservés.</small>
+    </footer>
+    <script src="js/mainFunction.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Thomas Nicolle">
+    <title>Contact - Sécur'Net</title>
+    <link rel="stylesheet" type="text/css" href="css/mainStyles.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="vpn.html">VPN</a></li>
+            <li><a href="app.html">Application</a></li>
+            <li><a href="tool.html">Outils</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li class="select"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="box_header">
+        <h1>Contact</h1>
+        <p>Vous avez une question: remplissez ce formulaire. Nous vous apporterons une réponse rapide.</p>
+    </div>
+    <main id="box_content">
+        <form action="#" method="POST" onsubmit="return verif()">
+            <div id="box_center">
+                <div id="box_center_left">
+                    <label for="firstname">Prénom<span class="required"> *</span></label>
+                    <input type="text" id="firstname" size="25">
+                    <label for="lastname">Nom<span class="required"> *</span></label>
+                    <input type="text" id="lastname" size="25">
+                    <label for="mail">E-mail<span class="required"> *</span></label>
+                    <input type="email" id="mail" size="25" placeholder="prenom.nom@protonmail.com">
+                    <label for="phone">Téléphone<span class="required"> *</span></label>
+                    <input type="tel" id="phone" size="25" placeholder="06xxxxxxxx">
+                    <label for="color">Couleur</label><br>
+                    <input type="color" id="color">
+                </div>
+                <div id="box_center_right">
+                    <label for="subject">Sujet de votre message<span class="required"> *</span></label><br>
+                    <input type="text" name="subject" id="subject" size="60" placeholder="ex: [Question] - VPN"><br>
+                    <label for="message">Message<span class="required"> *</span></label><br>
+                    <textarea name="message" id="message" placeholder="entrez votre message"></textarea>
+                </div>
+            </div>
+            <div id="box_button">
+                <button type="reset">Réinitialiser</button>
+                <button type="submit">Envoyer</button>
+            </div>
+
+        </form>
+    </main>
+    <footer>
+        <small>Copyright &copy; 2021 Sécur'Net. Tous droits réservés.</small>
+    </footer>
+    <script src="js/mainFunction.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+#box_content{ /* Content form */
+    min-width: min-content;
+}
+#box_center{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#box_center_left{
+    width: min-content;
+}
+textarea{
+    resize: vertical;
+    width: 98%; 
+    height: 50%;
+}

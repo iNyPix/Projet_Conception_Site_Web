@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Thomas Nicolle">
+    <title>Outils - Sécur'Net</title>
+    <link rel="stylesheet" type="text/css" href="css/mainStyles.css">
+</head>
+
+<body onload="iniTchat()">
+    <nav>
+        <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="vpn.html">VPN</a></li>
+            <li><a href="app.html">Application</a></li>
+            <li class="select"><a href="tool.html">Outils</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="box_header">
+        <h1>Outils</h1>
+        <p>Voici des outils très pratiques pour vous facilitez la tâche !</p>
+    </div>
+    <main id="box_content">
+        <fieldset>
+            <legend>Génerateur de mot de passe</legend>
+            <form method="POST" action="#" oninput="mdpAlea()">
+                <ul>
+                    <li><label for="maj">Majuscules :</label>
+                        <input id="maj" type="checkbox">
+                    </li>
+                    <li><label for="num">Nombres :</label>
+                        <input id="num" type="checkbox">
+                    </li>
+                    <li><label for="long">Longueur :</label>
+                        <input id="long" type="range" min="1" max="64" step="1.0" value="1">
+                        <span id="long_value"></span>
+                    </li>
+                    <li><label for="password">Mot de passe généré :</label>
+                        <input id="password" type="text" size="64">
+                    </li>
+                </ul>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>Sécurité du mot de passe</legend>
+            <p>Un mot de passe robuste doit être d'une longeur minimal de 8 charactères, avoir au moins 1 nombre, 1
+                majuscule et 1 charactère spécial. </p>
+            <form method="POST" action="#">
+                <label for="password2">Mot de passe :</label>
+                <input id="password2" type="text">
+                <label for="prgs_bar">Sécurité :</label>
+                <progress id="prgs_bar" max="100"></progress>
+                <span id="prgs_bar_value"></span>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>Outil de conversion</legend>
+            <form action="#" method="POST" oninput="conv()">
+                <input type="text" id="o">
+                <label for="o">Octet</label>
+                <input type="text" id="ko">
+                <label for="ko">Kilo-octet</label>
+                <input type="text" id="mo">
+                <label for="mo">Megaoctet</label>
+                <input type="text" id="go">
+                <label for="go">Gigaoctet</label>
+                <input type="text" id="TO">
+                <label for="TO">Téraoctet</label>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend><img src="img/ico/tchat/BOT.gif" id="tes" alt="">Chatbot</legend>
+            
+            <form action="#" onwaiting="iniTchat()">
+                <div id="tchat" contenteditable="false"></div>
+                <label for="user">Prénom:</label>
+                <input type="text" id="user" placeholder="Invité">
+                <label for="msg">Message:</label>
+                <input type="text" id="msg">
+                <span id="box_button">
+                <input type="button" id="send" value="Envoyer" onclick="envoie_msg_Tchat()">
+                <input type="button" id="delete" value="Effacer" onclick="iniTchat()">
+                </span>
+            </form> 
+        </fieldset>
+    </main>
+    <footer>
+        <small>Copyright &copy; 2021 Sécur'Net. Tous droits réservés.</small>
+    </footer>
+    <script src="js/mainFunction.js"></script>
+</body>
+
+</html>
